@@ -2,3 +2,6 @@
 
 The data folder is not complete as some of the sources are too large for GitHub
 
+Collections that are considered:
+- OpenAlex: data accessed on 14th November 2023
+- OpenAIRE: 
