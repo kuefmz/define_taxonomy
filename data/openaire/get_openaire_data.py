@@ -15,9 +15,10 @@ def get_publications_topics():
         'format': 'json',
         'size': 500,
     }
-    page = 1
+    page = 21
+    cursor = '*'
 
-    with open('publications_per_page/publications.jsonl', 'a+') as file:
+    with open('publications_per_page/publications_cursor.jsonl', 'a+') as file:
         while True:
             try:
                 publication_json = {
@@ -30,7 +31,8 @@ def get_publications_topics():
                 retries = 0
                 print(f'Fetching page: {page}')
 
-                params['page'] = page
+                #params['page'] = page
+                params['cursor'] = cursor
                 response = requests.get(base_url, params=params)
 
                 if response.status_code == 200:
@@ -75,11 +77,14 @@ def get_publications_topics():
                                 publication_json["subjects"].append(publication["subject"]["$"])
 
 
-                        with open('openaire_publications.jsonl', 'a+') as f:
+                        with open('openaire_publications_cursor.jsonl', 'a+') as f:
                             f.write(json.dumps(publication_json) + '\n')
 
-                    page += 1  # Go to the next page
-                    time.sleep(1)  # Sleep to respect rate limits
+                    page += 1
+                    cursor = data['meta']['next_cursor']
+                    if not cursor:
+                        break
+                    time.sleep(1)
                 else:
                     print(f"Failed to fetch data: {response.status_code}")
             except requests.exceptions.RequestException as e:
