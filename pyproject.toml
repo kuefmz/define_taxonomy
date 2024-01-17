@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "define-taxonomy"
+version = "0.1.0"
+description = "Poetry virtual environment for define-taxonomy"
+authors = ["Jenifer Tabita Ciuciu-Kiss <jenifer.tabita.ciuciu.kiss@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+ipynb = "^0.5.1"
+ipykernel = "^6.29.0"
+requests = "^2.31.0"
+pandas = "^2.1.4"
+bs4 = "^0.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

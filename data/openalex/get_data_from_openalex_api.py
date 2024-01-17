@@ -34,21 +34,21 @@ def download_ai_ml_articles(url):
 
         if response.status_code == 200:
             data = response.json()
-            print(data['results'][0]['keywords'])
-            print(data['results'][0]['concepts'])
+            #print(data['results'])
+            #print(data['results'][0]['authorships']['keywords'])
+            #print(data['results'][0]['concepts'])
             articles.extend(data['results'])
 
-
-            if 'next' not in data or not data['next']:
-                break
-
             page += 1
+            print(page)
+            if page >= 10:
+                with open('openalex_articles.jsonl', 'a+') as f:
+                    print('Written')
+                    f.write(json.dumps(articles) + '\n')
+                break
         else:
             print(f"Failed to fetch data: {response.status_code}")
             break
-        break
-
-
 
 
 def download_concepts(url):
@@ -69,11 +69,12 @@ def download_concepts(url):
                 if response.status_code == 200:
                     data = response.json()
                     page_results = data['results']
-                    file.write(json.dumps(page_results) + '\n')
+                    #file.write(json.dumps(page_results) + '\n')
 
                     for concept in page_results:
                         print(f"Building up concept: {concept['display_name']}")
                         concept_json = {
+                            "id": concept["id"],
                             "name": concept['display_name'],
                             "ancestors": [],
                             "related_concepts": [],
@@ -85,8 +86,10 @@ def download_concepts(url):
                         for related_concept in concept['related_concepts']:
                             concept_json['related_concepts'].append(related_concept['display_name'])
 
-                        with open('openalex_concepts_cursor.jsonl', 'a+') as f:
-                            f.write(json.dumps(concept_json) + '\n')
+                        #with open('openalex_concepts_cursor.jsonl', 'a+') as f:
+                        #    f.write(json.dumps(concept_json) + '\n')
+                        with open(f'concepts_per_page/concepts_cursor_{page}.jsonl', 'a+') as file:
+                            file.write(json.dumps(concept_json))
 
                     page += 1
                     cursor = data['meta']['next_cursor']
