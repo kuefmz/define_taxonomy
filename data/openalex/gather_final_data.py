@@ -132,7 +132,7 @@ def get_works_from_openalex(start_page=1, pages=100):
 	concept_id = 'C154945302'
 	sort_by = 'cited_by_count:desc'
 	per_page = 200
-	cursor = '*'
+	cursor = "IlszNDgsIDEwMC4wLCAzNDgsICdodHRwczovL29wZW5hbGV4Lm9yZy9XMjEzNzc0MzE4MCddIg=="
     
 	base_url = 'https://api.openalex.org/works'
 	params = {
@@ -141,7 +141,7 @@ def get_works_from_openalex(start_page=1, pages=100):
         'per_page': per_page,
         'cursor': cursor,
 	}
-	page_count = 1
+	page_count = 224
     
 	while True:
 		time.sleep(10)
@@ -150,91 +150,4 @@ def get_works_from_openalex(start_page=1, pages=100):
 		
   
 		#url = openalex_works_api.replace('page=1', f'page={page}')
-		response = requests.get(base_url, params=params)
-
-		if response.status_code == 200:
-			data = response.json()
-			page_results = data['results']
-			with open(f'data/raw_openalex_api_outputs/page_{page_count}.json', 'a+') as f:
-				json.dump(data, f, indent=4)
-			
-			cnt = 0
-			for work in page_results:
-				cnt += 1
-				print(f'Work count: {cnt}')
-				if not work['title']:
-					continue
-				#print(work['title'])
-				openalex_consepts = []
-				for concept in work['concepts']:
-					openalex_consepts.append(concept['display_name'])
-				
-	
-				openaire_subjects = get_openaire_subjects_from_title(work['title'])
-				
-				if not openaire_subjects:
-					continue
-				if not openalex_consepts:
-					continue
-				out_json[work['title']] = {}
-				#print(openalex_consepts)
-				out_json[work['title']]['openalex'] = ' | '.join(openalex_consepts)
-				#print(openaire_subjects)
-				out_json[work['title']]['openaire'] = ' | '.join(openaire_subjects)
-    
-				matching = []
-				similarities = []
-				missmatches = []
-				#print(out_json[work['title']]['openaire'])
-				max_similarity = 0
-				openaire_terms = out_json[work['title']]['openaire'].split(' | ')
-				openalex_terms = out_json[work['title']]['openalex'].split(' | ')
-				for openaire_term in openaire_terms:
-					for openalex_term in openalex_terms:
-						
-						openaire_term = preprocess_term(openaire_term)
-						openalex_term = preprocess_term(openalex_term)
-						doc1 = nlp(openaire_term)
-						doc2 = nlp(openalex_term)
-						similarity = doc1.similarity(doc2)
-						if similarity >= 1:
-							matching.append({
-								'openaire': openaire_term,
-								'openalex': openalex_term,
-								'similarity': similarity
-							})
-						elif similarity >= 0.8:
-							similarities.append({
-								'openaire': openaire_term,
-								'openalex': openalex_term,
-								'similarity': similarity
-							})
-						else:
-							missmatches.append({
-								'openaire': openaire_term,
-								'openalex': openalex_term,
-								'similarity': similarity
-							})
-				
-				out_json[work['title']]['exact_matches'] = matching
-				out_json[work['title']]['similarity'] = similarities
-				out_json[work['title']]['missmatches'] = missmatches
-		
-			with open(f'data/output_{page_count}.json', 'a+') as f:  
-				f.write(json.dumps(out_json, indent=4))
-
-			cursor = data.get('meta', {}).get('next_cursor')	
-			if not cursor or cursor == '':
-				break  # Exit loop if no more results
-			params['cursor'] = cursor
-			page_count += 1
-		else:
-			print(f"Failed to fetch data: {response.status_code}")
-			break
-
-
-# In[111]:
-
-
-get_works_from_openalex(51)
-
+		respon
