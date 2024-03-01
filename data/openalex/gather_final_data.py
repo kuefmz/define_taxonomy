@@ -132,7 +132,7 @@ def get_works_from_openalex(start_page=1, pages=100):
 	concept_id = 'C154945302'
 	sort_by = 'cited_by_count:desc'
 	per_page = 200
-	cursor = '*'
+	cursor = "IlszNDgsIDEwMC4wLCAzNDgsICdodHRwczovL29wZW5hbGV4Lm9yZy9XMjEzNzc0MzE4MCddIg=="
     
 	base_url = 'https://api.openalex.org/works'
 	params = {
@@ -141,7 +141,7 @@ def get_works_from_openalex(start_page=1, pages=100):
         'per_page': per_page,
         'cursor': cursor,
 	}
-	page_count = 1
+	page_count = 224
     
 	while True:
 		time.sleep(10)
