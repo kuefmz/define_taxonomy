@@ -22,8 +22,11 @@ bin_centers = 0.5 * (bins[1:] + bins[:-1])
 
 plt.figure(figsize=(10, 6))
 plt.bar(bin_centers, counts, width=0.05)
-plt.title('Distribution of Discipancies in Buckets (Similarity = 1.0)')
-plt.xlabel('Discipancy Buckets')
+plt.title('Distribution of Discripancies in Buckets (Similarity = 1.0)')
+plt.xlabel('Discripancy Buckets')
 plt.ylabel('Count')
 plt.grid(True)
 plt.show()
+
+filtered_df = df[(df['Discripancy'] > 0.6) & (df['similarity'] > 0.9)]
+filtered_df.to_csv('filtered_output_06_09.csv', index=False)
