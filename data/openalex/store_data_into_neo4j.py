@@ -32,9 +32,11 @@ class Neo4jLoader:
                 categories_openaire = details['openaire'].split(" | ")
                 categories_openalex = [self.preprocess_term(x) for x in categories_openalex]
                 categories_openaire = [self.preprocess_term(x) for x in categories_openaire]
-                exact_matches = details['exact_matches']
-                similarity = details['similarity']
-                missmatches = details['missmatches']
+                #exact_matches = details['exact_matches']
+                #similarity = details['similarity']
+                #missmatches = details['missmatches']
+                best_matches_openalex = details['best_matches_openalex']
+                best_matches_openaire = details['best_matches_openaire']
 
                 # Create Paper node
                 session.write_transaction(self.create_paper, title)
@@ -49,12 +51,18 @@ class Neo4jLoader:
 
                 # Create similarity relationships between categories
 
-                for match in exact_matches:
+                #for match in exact_matches:
+                #    session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
+                #for match in similarity:
+                #    session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
+                #for match in missmatches:
+                #    session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
+                for cat, match in best_matches_openalex.items():
                     session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
-                for match in similarity:
+                for cat, match in best_matches_openaire.items():
                     session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
-                for match in missmatches:
-                    session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
+
+
 
     @staticmethod
     def create_paper(tx, title):
@@ -96,7 +104,7 @@ class Neo4jLoader:
 
 def main():
     loader = Neo4jLoader(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
-    json_folder_path = 'data/'
+    json_folder_path = 'data/preprocessed_output'
     
     for filename in os.listdir(json_folder_path):
         print(f'Processing file: {filename}')
