@@ -6,10 +6,12 @@ import pandas as pd
 df = pd.read_csv('data/supports.csv')
 df.drop('PairSupport', axis=1, inplace=True)
 
-def update_df_from_json(folder_path, df):
-    for file_name in os.listdir(folder_path):
+def update_df_from_json(folder_path, df, reverse=False):
+    file_names = os.listdir(folder_path)
+    file_names.sort(reverse=reverse)
+    updated_csv_path = 'data/updated.csv'
+    for file_name in file_names:
         if file_name.endswith('.json'):
-            print(file_name)
             file_path = os.path.join(folder_path, file_name)
             with open(file_path, 'r') as file:
                 data = json.load(file)
@@ -23,12 +25,18 @@ def update_df_from_json(folder_path, df):
                     for cat_openalex in details['openalex']:
                         for index, row in df[df['OpenAlex'] == cat_openalex].iterrows():
                             df.at[index, 'SupportOpenAlex'] += 1
-                        
                     #update the overlap
                     for cat_openaire in details['openaire']:
                         for cat_openalex in details['openalex']:
                             for index, row in df[(df['OpenAIRE'] == cat_openaire) & (df['OpenAlex'] == cat_openalex)].iterrows():
                                 df.at[index, 'Overlap'] += 1
+                    
+                    with open('data/processed_pages_papers.txt', 'a') as file:
+                        file.write(title + '\n')
+            print('Calculation_done, saving the results')
+            df.to_csv(updated_csv_path, index=False)
+            with open('data/preprocessed_files.txt', 'a') as file:
+                        file.write(file_name + '\n')
     
 # Example usage
 folder_path = 'data/papers_with_openalex_and_openaire_categories_aligned'
