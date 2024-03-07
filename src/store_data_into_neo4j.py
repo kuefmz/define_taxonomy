@@ -28,13 +28,8 @@ class Neo4jLoader:
     def create_data_in_neo4j(self, data):
         with self.driver.session() as session:
             for title, details in data.items():
-                categories_openalex = details['openalex'].split(" | ")
-                categories_openaire = details['openaire'].split(" | ")
-                categories_openalex = [self.preprocess_term(x) for x in categories_openalex]
-                categories_openaire = [self.preprocess_term(x) for x in categories_openaire]
-                #exact_matches = details['exact_matches']
-                #similarity = details['similarity']
-                #missmatches = details['missmatches']
+                categories_openalex = details['openalex']
+                categories_openaire = details['openaire']
                 best_matches_openalex = details['best_matches_openalex']
                 best_matches_openaire = details['best_matches_openaire']
 
@@ -49,14 +44,6 @@ class Neo4jLoader:
                     session.write_transaction(self.create_category, category, 'OpenAIRE')
                     session.write_transaction(self.link_paper_to_category, title, category, 'OpenAIRE')
 
-                # Create similarity relationships between categories
-
-                #for match in exact_matches:
-                #    session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
-                #for match in similarity:
-                #    session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
-                #for match in missmatches:
-                #    session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
                 for cat, match in best_matches_openalex.items():
                     session.write_transaction(self.create_similarity_relationship, match['openaire'], match['openalex'], match['similarity'])
                 for cat, match in best_matches_openaire.items():
@@ -70,43 +57,44 @@ class Neo4jLoader:
             "MERGE (p:Paper {title: $title})"
         )
         tx.run(query, title=title)
-        #print(f"Paper created: {'title'}")
 
     @staticmethod
     def create_category(tx, category, source):
+        #print(f"Category created: {category} with source {source}")
         query = (
             "MERGE (c:Category {category_name: $category, source: $source})"
         )
         tx.run(query, category=category, source=source)
-        #print(f"Category created: {category} with source {source}")
-
+        
     @staticmethod
     def link_paper_to_category(tx, paper_title, category_name, source):
+        #print(f"Linked paper '{paper_title}' to category '{category_name}' with source {source}")
         query = (
             "MATCH (p:Paper {title: $paper_title}), "
             "(c:Category {category_name: $category_name, source: $source}) "
             "MERGE (p)-[:BELONGS_TO_CATEGORY]->(c)"
         )
         tx.run(query, paper_title=paper_title, category_name=category_name, source=source)
-        #print(f"Linked paper '{paper_title}' to category '{category_name}' with source {source}")
         
 
     @staticmethod
     def create_similarity_relationship(tx, category_openaire, category_openalex, similarity):
+        #print(f"Linked categoty '{category_openaire}' to category '{category_openalex}' with similarity {similarity}")
         query = """
             MATCH (c1:Category {category_name: $category_openaire, source: 'OpenAIRE'}), 
-                  (c2:Category {category_name: $category_openalex, source: 'OpenAlex'})
+                (c2:Category {category_name: $category_openalex, source: 'OpenAlex'})
             MERGE (c1)-[:SIMILAR {similarity: $similarity}]->(c2)
         """
         tx.run(query, category_openaire=category_openaire, category_openalex=category_openalex, similarity=similarity)
-        #print(f"Linked categoty '{category_openaire}' to category '{category_openalex}' with similarity {similarity}")
 
 
 def main():
     loader = Neo4jLoader(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
-    json_folder_path = 'data/preprocessed_output'
+    json_folder_path = 'data/remove_underrepresented_categories'
     
-    for filename in os.listdir(json_folder_path):
+    filenames = os.listdir(json_folder_path)
+    filenames.sort()
+    for filename in filenames:
         print(f'Processing file: {filename}')
         if filename.endswith('.json'):
             json_file_path = os.path.join(json_folder_path, filename)

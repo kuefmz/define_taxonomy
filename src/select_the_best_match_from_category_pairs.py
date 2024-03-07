@@ -65,6 +65,8 @@ def main(new_data = False):
 					categories_openaire = details['openaire'].split(" | ")
 					categories_openalex = [preprocess_term(x) for x in categories_openalex]
 					categories_openaire = [preprocess_term(x) for x in categories_openaire]
+					categories_openalex = [x for x in categories_openalex if x]
+					categories_openaire = [x for x in categories_openaire if x]
 					if new_data:
 						matches = calculcate_similarity_matches(categories_openalex, categories_openaire, nlp)
 					else:
