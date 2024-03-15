@@ -2,7 +2,7 @@
 name = "define-taxonomy"
 version = "0.1.0"
 description = "Poetry virtual environment for define-taxonomy"
-authors = ["Jenifer Tabita Ciuciu-Kiss <jenifer.tabita.ciuciu.kiss@gmail.com>"]
+authors = [""]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
@@ -15,6 +15,7 @@ spacy = "^3.7.4"
 unicode = "^2.9"
 unidecode = "^1.3.8"
 neo4j = "^5.18.0"
+plotly = "^5.20.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

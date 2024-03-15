@@ -55,16 +55,6 @@
                 "openalex": "gesture",
                 "similarity": 0.8195379401723006
             },
-            "artificial intelligence": {
-                "openaire": "sensing applications",
-                "openalex": "artificial intelligence",
-                "similarity": 0.7234975420706604
-            },
-            "machine learning": {
-                "openaire": "sensing applications",
-                "openalex": "machine learning",
-                "similarity": 0.6995833542188604
-            },
             "computer network": {
                 "openaire": "computer science",
                 "openalex": "computer network",
@@ -772,11 +762,6 @@
                 "openaire": "edge computing",
                 "openalex": "edge computing",
                 "similarity": 1.0
-            },
-            "distributed computing": {
-                "openaire": "computing offloading",
-                "openalex": "distributed computing",
-                "similarity": 0.855202643347594
             },
             "computer network": {
                 "openaire": "computer networks and communications",
@@ -2956,11 +2941,6 @@
                 "openaire": "predictive modelling",
                 "openalex": "bioinformatics",
                 "similarity": 0.8413250985030398
-            },
-            "disease": {
-                "openaire": "genetic disease risk prediction",
-                "openalex": "disease",
-                "similarity": 0.7946306296248604
             },
             "genome": {
                 "openaire": "genomics",
@@ -8307,11 +8287,6 @@
                 "openalex": "clustering coefficient",
                 "similarity": 0.8544854413045281
             },
-            "artificial intelligence": {
-                "openaire": "biological networks",
-                "openalex": "artificial intelligence",
-                "similarity": 0.7565643766039617
-            },
             "world wide web": {
                 "openaire": "biological network",
                 "openalex": "world wide web",
@@ -10131,11 +10106,6 @@
                 "openalex": "computer science",
                 "similarity": 0.8230234788562724
             },
-            "gene expression": {
-                "openaire": "predicting gene expression",
-                "openalex": "gene expression",
-                "similarity": 0.9668118533287903
-            },
             "sequence (biology)": {
                 "openaire": "sequence (medicine)",
                 "openalex": "sequence (biology)",
@@ -11285,11 +11255,6 @@
                 "openaire": "optical character recognition",
                 "openalex": "intelligent character recognition",
                 "similarity": 0.9123534688002548
-            },
-            "digit recognition": {
-                "openaire": "handwritten digit recognition",
-                "openalex": "digit recognition",
-                "similarity": 0.8970721080631949
             },
             "speech recognition": {
                 "openaire": "handwriting recognition",
@@ -13962,11 +13927,6 @@
                 "openalex": "psychology",
                 "similarity": 0.6971070840762086
             },
-            "pedagogy": {
-                "openaire": "student assessment",
-                "openalex": "pedagogy",
-                "similarity": 0.712629408871034
-            },
             "economic growth": {
                 "openaire": "distance education",
                 "openalex": "economic growth",
@@ -15500,20 +15460,10 @@
                 "openalex": "politics",
                 "similarity": 0.5233657525144774
             },
-            "law": {
-                "openaire": "gaussian process regression",
-                "openalex": "law",
-                "similarity": 0.32187162760389143
-            },
             "biology": {
                 "openaire": "theoretical computer science",
                 "openalex": "biology",
                 "similarity": 0.7345191918415512
-            },
-            "operating system": {
-                "openaire": "radial basis function networks",
-                "openalex": "operating system",
-                "similarity": 0.7675678551405964
             }
         },
         "best_matches_openaire": {
@@ -15746,11 +15696,6 @@
                 "openaire": "geochemistry and petrology",
                 "openalex": "geochemistry",
                 "similarity": 0.7893715938584271
-            },
-            "mineralogy": {
-                "openaire": "mining engineering",
-                "openalex": "mineralogy",
-                "similarity": 0.6822116184567618
             },
             "computer science": {
                 "openaire": "environmental engineering",
@@ -17107,98 +17052,7 @@
             "operating system"
         ],
         "openaire": [],
-        "best_matches_openalex": {
-            "perspective (graphical)": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "perspective (graphical)",
-                "similarity": 0.2815410532692776
-            },
-            "risk analysis (engineering)": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "risk analysis (engineering)",
-                "similarity": 0.30873799087174403
-            },
-            "function (biology)": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "function (biology)",
-                "similarity": 0.27867973422532905
-            },
-            "competition (biology)": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "competition (biology)",
-                "similarity": 0.27813351140319376
-            },
-            "fragmentation (computing)": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "fragmentation (computing)",
-                "similarity": 0.32753060698147085
-            },
-            "risk management": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "risk management",
-                "similarity": 0.30694350633500506
-            },
-            "knowledge management": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "knowledge management",
-                "similarity": 0.45215886222655544
-            },
-            "epistemology": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "epistemology",
-                "similarity": 0.3573639793534783
-            },
-            "data science": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "data science",
-                "similarity": 0.3142461410536063
-            },
-            "computer science": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "computer science",
-                "similarity": 0.4128334851213111
-            },
-            "business": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "business",
-                "similarity": 0.3552344703183968
-            },
-            "artificial intelligence": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "artificial intelligence",
-                "similarity": 0.4581603362288622
-            },
-            "finance": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "finance",
-                "similarity": 0.4059765222278855
-            },
-            "ecology": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "ecology",
-                "similarity": 0.3677903105465821
-            },
-            "philosophy": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "philosophy",
-                "similarity": 0.3573639793534783
-            },
-            "evolutionary biology": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "evolutionary biology",
-                "similarity": 0.39892704158546893
-            },
-            "biology": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "biology",
-                "similarity": 0.33760175629808087
-            },
-            "operating system": {
-                "openaire": "risikomanagement risikoanalyse",
-                "openalex": "operating system",
-                "similarity": 0.4190634923174081
-            }
-        },
+        "best_matches_openalex": {},
         "best_matches_openaire": {}
     },
     "A COMPARISON OF SPATIAL INTERPOLATION METHODS FOR ESTIMATION OF AVERAGE ELECTROMAGNETIC FIELD MAGNITUDE": {
@@ -18676,11 +18530,6 @@
                 "openalex": "environmental science",
                 "similarity": 0.8491390462701747
             },
-            "other engineering and technologies": {
-                "openaire": "other engineering and technologies",
-                "openalex": "geostationary operational environmental satellite",
-                "similarity": 0.7941967877921199
-            },
             "flux": {
                 "openaire": "flux",
                 "openalex": "evapotranspiration",
@@ -18695,11 +18544,6 @@
                 "openaire": "soil natural materials",
                 "openalex": "optics",
                 "similarity": 0.5139020451504517
-            },
-            "hydrology water and the environment": {
-                "openaire": "hydrology water and the environment",
-                "openalex": "geostationary operational environmental satellite",
-                "similarity": 0.763000062851996
             },
             "geological geomatics engineering": {
                 "openaire": "geological geomatics engineering",
@@ -19797,11 +19641,6 @@
                 "openalex": "object relations theory",
                 "similarity": 0.8239058378722371
             },
-            "subjective constancy": {
-                "openaire": "object constancy",
-                "openalex": "subjective constancy",
-                "similarity": 0.8642475400761825
-            },
             "representation (politics)": {
                 "openaire": "mental representation",
                 "openalex": "representation (politics)",
@@ -20464,36 +20303,6 @@
                 "openaire": "physical sciences",
                 "openalex": "materials science",
                 "similarity": 0.8547378361942379
-            },
-            "ice crystals": {
-                "openaire": "ice core",
-                "openalex": "ice crystals",
-                "similarity": 0.8719571103883851
-            },
-            "texture (cosmology)": {
-                "openaire": "tension (geology)",
-                "openalex": "texture (cosmology)",
-                "similarity": 0.9617209623123204
-            },
-            "core (optical fiber)": {
-                "openaire": "tension (geology)",
-                "openalex": "core (optical fiber)",
-                "similarity": 0.8946317125420077
-            },
-            "rotation (mathematics)": {
-                "openaire": "tension (geology)",
-                "openalex": "rotation (mathematics)",
-                "similarity": 0.9751060146519391
-            },
-            "orientation (vector space)": {
-                "openaire": "tension (geology)",
-                "openalex": "orientation (vector space)",
-                "similarity": 0.9191994248780407
-            },
-            "image (mathematics)": {
-                "openaire": "tension (geology)",
-                "openalex": "image (mathematics)",
-                "similarity": 0.9540376094165414
             },
             "computer science": {
                 "openaire": "physical sciences",

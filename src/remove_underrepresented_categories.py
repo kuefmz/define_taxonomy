@@ -31,11 +31,11 @@ for file in filenames:
 
                 best_matches_openalex = {}
                 for cat, match in content['best_matches_openalex'].items():
-                    if cat in openalex_categories_set:
+                    if cat in openalex_categories_set and match['openalex'] in openalex_categories_set and match['openaire'] in openaire_categories_set:
                         best_matches_openalex[cat] = match
                 best_matches_openaire = {}
                 for cat, match in content['best_matches_openaire'].items():
-                    if cat in openaire_categories_set:
+                    if cat in openaire_categories_set and match['openalex'] in openalex_categories_set and match['openaire'] in openaire_categories_set:
                         best_matches_openaire[cat] = match
                 # Update the JSON only if there are relevant categories
                 if filtered_openalex or filtered_openaire:

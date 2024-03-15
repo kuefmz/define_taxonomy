@@ -5,21 +5,22 @@ import csv
 def calculate_value(papers_in_both, papers_in_c1, papers_in_c2):
     return papers_in_both / (papers_in_c1 + papers_in_c2 - papers_in_both)
 
-# Load the JSON data
-with open('similarity_support.json', 'r', encoding="utf-8-sig") as file:
-    data = json.load(file)
-
 # Define the CSV file where the transformed data will be saved
-with open('output.csv', 'w', newline='') as csvfile:
-    fieldnames = ['Category1', 'Source1', 'Category2', 'Source2', 'similarity', 'PapersInC1', 'PapersInC2', 'PapersInBoth', 'Discripancy']
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+with open('output.csv', mode='r') as infile, open('output_with_agreement.csv', mode='w', newline='') as outfile:
+    reader = csv.reader(infile)
+    writer = csv.writer(outfile)
 
-    writer.writeheader()
+    # Read the header row and write it to the output file, appending 'New Value' as a new header
+    headers = next(reader)
+    writer.writerow(headers + ['Agreement'])
 
-    # Process each item in the JSON file
-    for item in data:
-        calculated_value = calculate_value(item['PapersInBoth'], item['PapersInC1'], item['PapersInC2'])
-        # Add the calculated value to the item
-        item['Discripancy'] = calculated_value
-        # Write the item to the CSV file
-        writer.writerow(item)
+    for row in reader:
+        print(row)
+        # Perform your calculation here; this example doubles the value in the first column
+        agreement = calculate_value(int(row[-1]), int(row[-2]), int(row[-3]))
+
+        # Write the original row with the new value appended to the output CSV
+        writer.writerow(row + [agreement])
+
+
+        

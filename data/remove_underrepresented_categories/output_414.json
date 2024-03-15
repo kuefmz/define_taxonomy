@@ -1047,11 +1047,6 @@
                 "openalex": "public relations",
                 "similarity": 1.0
             },
-            "marketing ethics": {
-                "openaire": "marketing ethics",
-                "openalex": "marketing ethics",
-                "similarity": 1.0
-            },
             "normative": {
                 "openaire": "normative",
                 "openalex": "normative",
@@ -1072,11 +1067,6 @@
                 "openalex": "information ethics",
                 "similarity": 0.8427380649487234
             },
-            "engineering ethics": {
-                "openaire": "marketing ethics",
-                "openalex": "engineering ethics",
-                "similarity": 0.8458928961506015
-            },
             "corporate social responsibility": {
                 "openaire": "social responsibility",
                 "openalex": "corporate social responsibility",
@@ -1091,11 +1081,6 @@
                 "openaire": "social sciences",
                 "openalex": "social science",
                 "similarity": 0.9761775503437394
-            },
-            "business ethics": {
-                "openaire": "marketing ethics",
-                "openalex": "business ethics",
-                "similarity": 0.9010301824588521
             },
             "qualitative research": {
                 "openaire": "qualitative marketing research",
@@ -1362,11 +1347,6 @@
             "genetics": {
                 "openaire": "genetics",
                 "openalex": "genetics",
-                "similarity": 1.0
-            },
-            "beta-galactosidase": {
-                "openaire": "beta-galactosidase",
-                "openalex": "beta-galactosidase",
                 "similarity": 1.0
             },
             "gene": {
@@ -1684,11 +1664,6 @@
                 "openalex": "integer programming",
                 "similarity": 0.8256112899745904
             },
-            "algorithm": {
-                "openaire": "concurrent algorithms",
-                "openalex": "algorithm",
-                "similarity": 0.829883398481548
-            },
             "combinatorial optimization": {
                 "openaire": "concurrent computing",
                 "openalex": "combinatorial optimization",
@@ -1719,30 +1694,15 @@
                 "openalex": "optimization problem",
                 "similarity": 0.8916940297363274
             },
-            "bipartite graph": {
-                "openaire": "concurrent algorithms",
-                "openalex": "bipartite graph",
-                "similarity": 0.6849374382387771
-            },
             "heuristic": {
                 "openaire": "theoretical computer science",
                 "openalex": "heuristic",
                 "similarity": 0.7678741713987279
             },
-            "linear programming": {
-                "openaire": "concurrent algorithms",
-                "openalex": "linear programming",
-                "similarity": 0.7944585670650126
-            },
             "artificial intelligence": {
                 "openaire": "general computer science",
                 "openalex": "artificial intelligence",
                 "similarity": 0.7566407072163531
-            },
-            "graph": {
-                "openaire": "concurrent algorithms",
-                "openalex": "graph",
-                "similarity": 0.6906247765875068
             },
             "statistics": {
                 "openaire": "concurrent computing",
@@ -2718,11 +2678,6 @@
                 "openalex": "computer science",
                 "similarity": 1.0
             },
-            "grammatical evolution": {
-                "openaire": "grammatical evolution",
-                "openalex": "grammatical evolution",
-                "similarity": 1.0
-            },
             "programming language": {
                 "openaire": "programming language",
                 "openalex": "programming language",
@@ -2733,30 +2688,10 @@
                 "openalex": "artificial intelligence",
                 "similarity": 1.0
             },
-            "language evolution": {
-                "openaire": "grammatical evolution",
-                "openalex": "language evolution",
-                "similarity": 0.8732636508725963
-            },
             "genetic programming": {
                 "openaire": "programming language",
                 "openalex": "genetic programming",
                 "similarity": 0.7668784417112924
-            },
-            "grammatical category": {
-                "openaire": "grammatical evolution",
-                "openalex": "grammatical category",
-                "similarity": 0.7870012470472609
-            },
-            "linguistics": {
-                "openaire": "grammatical evolution",
-                "openalex": "linguistics",
-                "similarity": 0.7417227385849718
-            },
-            "philosophy": {
-                "openaire": "grammatical evolution",
-                "openalex": "philosophy",
-                "similarity": 0.6626343069489966
             },
             "noun": {
                 "openaire": "definite clause grammar",
@@ -3206,11 +3141,6 @@
                 "openalex": "causal inference",
                 "similarity": 0.6031075388304844
             },
-            "graphical model": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "graphical model",
-                "similarity": 0.6424604853568776
-            },
             "bayes' theorem": {
                 "openaire": "quantum physics",
                 "openalex": "bayes' theorem",
@@ -3226,95 +3156,20 @@
                 "openalex": "causal reasoning",
                 "similarity": 0.5832124102579758
             },
-            "epistemology": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "epistemology",
-                "similarity": 0.6091314800112727
-            },
             "context (archaeology)": {
                 "openaire": "quantum physics (quant-ph)",
                 "openalex": "context (archaeology)",
                 "similarity": 0.770435017756113
-            },
-            "causal structure": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "causal structure",
-                "similarity": 0.6635334381471313
-            },
-            "inference": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "inference",
-                "similarity": 0.6192650483864366
             },
             "computer science": {
                 "openaire": "quantum physics",
                 "openalex": "computer science",
                 "similarity": 0.6614919463067306
             },
-            "bayesian network": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "bayesian network",
-                "similarity": 0.663369462434892
-            },
-            "cognitive science": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "cognitive science",
-                "similarity": 0.7273558173163822
-            },
-            "artificial intelligence": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "artificial intelligence",
-                "similarity": 0.6219477128460098
-            },
-            "psychology": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "psychology",
-                "similarity": 0.6223416870024606
-            },
-            "cognitive psychology": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "cognitive psychology",
-                "similarity": 0.654439306869761
-            },
-            "bayesian probability": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "bayesian probability",
-                "similarity": 0.6898143908314799
-            },
-            "cognition": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "cognition",
-                "similarity": 0.5897087971053309
-            },
-            "econometrics": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "econometrics",
-                "similarity": 0.6396458934050049
-            },
             "mathematics": {
                 "openaire": "quantum physics",
                 "openalex": "mathematics",
                 "similarity": 0.7342545429825817
-            },
-            "philosophy": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "philosophy",
-                "similarity": 0.6091314800112727
-            },
-            "paleontology": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "paleontology",
-                "similarity": 0.6128166062373704
-            },
-            "statistics": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "statistics",
-                "similarity": 0.527106941011832
-            },
-            "neuroscience": {
-                "openaire": "physics - history and philosophy of physics",
-                "openalex": "neuroscience",
-                "similarity": 0.6223416870024606
             },
             "biology": {
                 "openaire": "quantum physics",
@@ -4447,11 +4302,6 @@
                 "openalex": "educational research",
                 "similarity": 0.8594954332320941
             },
-            "literacy": {
-                "openaire": "new literacies",
-                "openalex": "literacy",
-                "similarity": 0.635830509028846
-            },
             "reading (process)": {
                 "openaire": "management of technology and innovation",
                 "openalex": "reading (process)",
@@ -4863,21 +4713,6 @@
                 "openalex": "structural engineering",
                 "similarity": 0.8885288995028717
             },
-            "quality (philosophy)": {
-                "openaire": "fillet (mechanics)",
-                "openalex": "quality (philosophy)",
-                "similarity": 0.9437119135015862
-            },
-            "texture (cosmology)": {
-                "openaire": "fillet (mechanics)",
-                "openalex": "texture (cosmology)",
-                "similarity": 0.9634042704280493
-            },
-            "image (mathematics)": {
-                "openaire": "fillet (mechanics)",
-                "openalex": "image (mathematics)",
-                "similarity": 0.9443838944258571
-            },
             "artificial intelligence": {
                 "openaire": "computer science",
                 "openalex": "artificial intelligence",
@@ -5060,11 +4895,6 @@
                 "openaire": "binary number",
                 "openalex": "algebraic number",
                 "similarity": 0.8454521979502908
-            },
-            "computer security": {
-                "openaire": "security parameter",
-                "openalex": "computer security",
-                "similarity": 0.8359775018334621
             },
             "computer science": {
                 "openaire": "mathematics",
@@ -5716,11 +5546,6 @@
                 "openaire": "brain",
                 "openalex": "striatum",
                 "similarity": 0.7047229356796365
-            },
-            "artificial intelligence": {
-                "openaire": "behavioral activation",
-                "openalex": "artificial intelligence",
-                "similarity": 0.6874536000212709
             },
             "computer science": {
                 "openaire": "psychology",
@@ -6376,11 +6201,6 @@
             "criminology": {
                 "openaire": "criminology",
                 "openalex": "criminology",
-                "similarity": 1.0
-            },
-            "crime control": {
-                "openaire": "crime control",
-                "openalex": "crime control",
                 "similarity": 1.0
             },
             "empirical research": {
@@ -7291,11 +7111,6 @@
                 "openalex": "environmental noise",
                 "similarity": 1.0
             },
-            "microphone array": {
-                "openaire": "transducer arrays",
-                "openalex": "microphone array",
-                "similarity": 0.8965381294274218
-            },
             "noise reduction": {
                 "openaire": "environmental noise",
                 "openalex": "noise reduction",
@@ -7311,11 +7126,6 @@
                 "openalex": "background noise",
                 "similarity": 0.8761447324793306
             },
-            "computer science": {
-                "openaire": "statistical characteristics",
-                "openalex": "computer science",
-                "similarity": 0.669059385752908
-            },
             "noise (video)": {
                 "openaire": "info info-ts computer science cs signal and image processing",
                 "openalex": "noise (video)",
@@ -7326,60 +7136,20 @@
                 "openalex": "database",
                 "similarity": 0.5514521841046552
             },
-            "microphone": {
-                "openaire": "transducer arrays",
-                "openalex": "microphone",
-                "similarity": 0.5864965483873011
-            },
             "channel (broadcasting)": {
                 "openaire": "info info-ts computer science cs signal and image processing",
                 "openalex": "channel (broadcasting)",
                 "similarity": 0.2941656537368024
-            },
-            "license": {
-                "openaire": "sound recording and reproducing systems",
-                "openalex": "license",
-                "similarity": 0.3224013253523635
-            },
-            "acoustics": {
-                "openaire": "sound recording and reproducing systems",
-                "openalex": "acoustics",
-                "similarity": 0.6207583991056254
-            },
-            "telecommunications": {
-                "openaire": "acoustic array systems and processing",
-                "openalex": "telecommunications",
-                "similarity": 0.7176914417370248
             },
             "sound (geography)": {
                 "openaire": "info info-ts computer science cs signal and image processing",
                 "openalex": "sound (geography)",
                 "similarity": 0.3419626368265604
             },
-            "artificial intelligence": {
-                "openaire": "statistical characteristics",
-                "openalex": "artificial intelligence",
-                "similarity": 0.7125416873905045
-            },
-            "physics": {
-                "openaire": "statistical characteristics",
-                "openalex": "physics",
-                "similarity": 0.566770833440524
-            },
-            "sound pressure": {
-                "openaire": "sound recording and reproducing systems",
-                "openalex": "sound pressure",
-                "similarity": 0.7590948768255468
-            },
             "image (mathematics)": {
                 "openaire": "info info-ts computer science cs signal and image processing",
                 "openalex": "image (mathematics)",
                 "similarity": 0.3321110972080975
-            },
-            "operating system": {
-                "openaire": "acoustic array systems and processing",
-                "openalex": "operating system",
-                "similarity": 0.7874788144036121
             }
         },
         "best_matches_openaire": {
@@ -7521,11 +7291,6 @@
                 "openalex": "nyquist stability criterion",
                 "similarity": 1.0
             },
-            "compactification (mathematics)": {
-                "openaire": "compactification (mathematics)",
-                "openalex": "compactification (mathematics)",
-                "similarity": 1.0
-            },
             "mathematics": {
                 "openaire": "mathematics",
                 "openalex": "mathematics",
@@ -7535,21 +7300,6 @@
                 "openaire": "mathematical optimization",
                 "openalex": "mathematical analysis",
                 "similarity": 0.9002845502218333
-            },
-            "control theory (sociology)": {
-                "openaire": "compactification (mathematics)",
-                "openalex": "control theory (sociology)",
-                "similarity": 0.9511530140412141
-            },
-            "root (linguistics)": {
-                "openaire": "compactification (mathematics)",
-                "openalex": "root (linguistics)",
-                "similarity": 0.9493069199171528
-            },
-            "control (management)": {
-                "openaire": "compactification (mathematics)",
-                "openalex": "control (management)",
-                "similarity": 0.9536196100444672
             },
             "computer science": {
                 "openaire": "computer science applications",
@@ -7565,11 +7315,6 @@
                 "openaire": "electrical and electronic engineering",
                 "openalex": "engineering",
                 "similarity": 0.8461385977592324
-            },
-            "nyquist-shannon sampling theorem": {
-                "openaire": "compactification (mathematics)",
-                "openalex": "nyquist-shannon sampling theorem",
-                "similarity": 0.532842765042739
             },
             "pure mathematics": {
                 "openaire": "mathematics",
@@ -8025,11 +7770,6 @@
                 "openalex": "computer science",
                 "similarity": 1.0
             },
-            "taxis": {
-                "openaire": "taxis",
-                "openalex": "taxis",
-                "similarity": 1.0
-            },
             "data science": {
                 "openaire": "data science",
                 "openalex": "data science",
@@ -8449,11 +8189,6 @@
                 "openalex": "deception",
                 "similarity": 1.0
             },
-            "writing style": {
-                "openaire": "writing style",
-                "openalex": "writing style",
-                "similarity": 1.0
-            },
             "stylometry": {
                 "openaire": "stylometry",
                 "openalex": "stylometry",
@@ -8606,11 +8341,6 @@
                 "openalex": "mobile computing",
                 "similarity": 1.0
             },
-            "mobile business development": {
-                "openaire": "mobile business development",
-                "openalex": "mobile business development",
-                "similarity": 1.0
-            },
             "order (exchange)": {
                 "openaire": "order (exchange)",
                 "openalex": "order (exchange)",
@@ -8646,11 +8376,6 @@
                 "openalex": "business",
                 "similarity": 0.8179085372478633
             },
-            "process management": {
-                "openaire": "process management",
-                "openalex": "mobile business development",
-                "similarity": 0.7662459457982951
-            },
             "social media": {
                 "openaire": "social media",
                 "openalex": "marketing",
@@ -8680,11 +8405,6 @@
                 "openaire": "empirical research",
                 "openalex": "computer science",
                 "similarity": 0.7412938204339713
-            },
-            "market analysis": {
-                "openaire": "market analysis",
-                "openalex": "mobile business development",
-                "similarity": 0.7136012701716786
             },
             "mobile search": {
                 "openaire": "mobile search",
@@ -8989,16 +8709,6 @@
                 "openaire": "social sciences",
                 "openalex": "computer science",
                 "similarity": 0.7537523141900327
-            },
-            "artificial intelligence": {
-                "openaire": "environmental economics and natural resources",
-                "openalex": "artificial intelligence",
-                "similarity": 0.7330892979662244
-            },
-            "contrast (vision)": {
-                "openaire": "financial soundness; bank regulation and supervision; banking risk; quantile regression",
-                "openalex": "contrast (vision)",
-                "similarity": 0.46433894672231274
             }
         },
         "best_matches_openaire": {
@@ -9016,11 +8726,6 @@
                 "openaire": "economics",
                 "openalex": "econometrics",
                 "similarity": 1.0000000110539065
-            },
-            "financial regulation": {
-                "openaire": "financial regulation",
-                "openalex": "financial regulation",
-                "similarity": 1.0
             },
             "business": {
                 "openaire": "business",
@@ -9052,20 +8757,10 @@
                 "openalex": "business",
                 "similarity": 0.8179085372478633
             },
-            "finance": {
-                "openaire": "finance",
-                "openalex": "international banking",
-                "similarity": 0.8232693744050364
-            },
             "social sciences": {
                 "openaire": "social sciences",
                 "openalex": "actuarial science",
                 "similarity": 0.8162235333413289
-            },
-            "retail banking": {
-                "openaire": "retail banking",
-                "openalex": "international banking",
-                "similarity": 0.8207010906189339
             },
             "inference": {
                 "openaire": "inference",
@@ -9092,11 +8787,6 @@
                 "openalex": "contrast (vision)",
                 "similarity": 0.24311057520624677
             },
-            "banks banking terms": {
-                "openaire": "banks banking terms",
-                "openalex": "international banking",
-                "similarity": 0.6532414924480784
-            },
             "number": {
                 "openaire": "number",
                 "openalex": "accounting",
@@ -9116,11 +8806,6 @@
                 "openaire": "oecd countries",
                 "openalex": "quantile regression",
                 "similarity": 0.5886658414165211
-            },
-            "growth": {
-                "openaire": "growth",
-                "openalex": "financial regulation",
-                "similarity": 0.5444985799288482
             }
         }
     },
@@ -10066,20 +9751,10 @@
                 "openalex": "materials science",
                 "similarity": 0.7467035387893216
             },
-            "photopic vision": {
-                "openaire": "visual contrast sensitivity",
-                "openalex": "photopic vision",
-                "similarity": 0.7747948042768366
-            },
             "composite material": {
                 "openaire": "optics",
                 "openalex": "composite material",
                 "similarity": 0.7046371688813369
-            },
-            "retina": {
-                "openaire": "visual contrast sensitivity",
-                "openalex": "retina",
-                "similarity": 0.4340870941865404
             }
         },
         "best_matches_openaire": {
@@ -10245,26 +9920,6 @@
                 "openaire": "simple (abstract algebra)",
                 "openalex": "simple (philosophy)",
                 "similarity": 0.9686822031034258
-            },
-            "probability distribution": {
-                "openaire": "mathematical development",
-                "openalex": "probability distribution",
-                "similarity": 0.7909636939265899
-            },
-            "statistical model": {
-                "openaire": "mathematical development",
-                "openalex": "statistical model",
-                "similarity": 0.782913069385827
-            },
-            "mathematics": {
-                "openaire": "mathematical development",
-                "openalex": "mathematics",
-                "similarity": 0.7435564478528001
-            },
-            "statistics": {
-                "openaire": "mathematical development",
-                "openalex": "statistics",
-                "similarity": 0.6421718064006847
             },
             "philosophy": {
                 "openaire": "social sciences",
@@ -11595,11 +11250,6 @@
                 "openalex": "software engineering",
                 "similarity": 0.8695969341946412
             },
-            "art": {
-                "openaire": "contemporary art",
-                "openalex": "art",
-                "similarity": 0.972383611774054
-            },
             "robustness (evolution)": {
                 "openaire": "robustness (computer science)",
                 "openalex": "robustness (evolution)",
@@ -11614,11 +11264,6 @@
                 "openaire": "electrical engineering electronic engineering information engineering",
                 "openalex": "civil engineering",
                 "similarity": 0.7112179605829025
-            },
-            "visual arts": {
-                "openaire": "contemporary art",
-                "openalex": "visual arts",
-                "similarity": 0.7504197195143362
             },
             "biochemistry": {
                 "openaire": "computer science",
@@ -12280,11 +11925,6 @@
                 "openalex": "computer science",
                 "similarity": 0.8465552600443464
             },
-            "discriminative model": {
-                "openaire": "generation effect",
-                "openalex": "discriminative model",
-                "similarity": 0.7439589869108075
-            },
             "speech recognition": {
                 "openaire": "word recognition",
                 "openalex": "speech recognition",
@@ -12436,11 +12076,6 @@
                 "openaire": "pattern recognition visual",
                 "openalex": "natural language processing",
                 "similarity": 0.738703373950771
-            },
-            "reading": {
-                "openaire": "reading",
-                "openalex": "read aloud",
-                "similarity": 0.5598491643474887
             },
             "practice psychological": {
                 "openaire": "practice psychological",
@@ -12981,11 +12616,6 @@
                 "openalex": "energy storage",
                 "similarity": 0.8769230132392032
             },
-            "diesel fuel": {
-                "openaire": "diesel generator",
-                "openalex": "diesel fuel",
-                "similarity": 0.8088650920793742
-            },
             "sizing": {
                 "openaire": "automatic frequency control",
                 "openalex": "sizing",
@@ -13465,11 +13095,6 @@
                 "openalex": "optics",
                 "similarity": 0.6871466969257533
             },
-            "mineralogy": {
-                "openaire": "radioisotopes",
-                "openalex": "mineralogy",
-                "similarity": 0.5995727638862398
-            },
             "chromatography": {
                 "openaire": "ionization",
                 "openalex": "chromatography",
@@ -13516,11 +13141,6 @@
                 "openaire": "ionization",
                 "openalex": "ionization",
                 "similarity": 1.0
-            },
-            "ions": {
-                "openaire": "ions",
-                "openalex": "isotope dilution",
-                "similarity": 0.8058394085005396
             },
             "materials science": {
                 "openaire": "materials science",
@@ -13684,11 +13304,6 @@
                 "openalex": "einstein",
                 "similarity": 0.3827079099593034
             },
-            "conformal map": {
-                "openaire": "schwarzschild metric",
-                "openalex": "conformal map",
-                "similarity": 0.48089019509297526
-            },
             "pure mathematics": {
                 "openaire": "mathematics",
                 "openalex": "pure mathematics",
@@ -13703,11 +13318,6 @@
                 "openaire": "statistical and nonlinear physics",
                 "openalex": "thermodynamics",
                 "similarity": 0.7234780330046551
-            },
-            "artificial intelligence": {
-                "openaire": "deriving the schwarzschild solution",
-                "openalex": "artificial intelligence",
-                "similarity": 0.6843080326412033
             },
             "computer science": {
                 "openaire": "mathematical physics",
@@ -13734,11 +13344,6 @@
             "mathematical analysis": {
                 "openaire": "mathematical analysis",
                 "openalex": "mathematical analysis",
-                "similarity": 1.0
-            },
-            "einstein field equations": {
-                "openaire": "einstein field equations",
-                "openalex": "einstein field equations",
                 "similarity": 1.0
             },
             "similarity solution": {
@@ -13884,11 +13489,6 @@
                 "openaire": "physical sciences",
                 "openalex": "computer science",
                 "similarity": 0.8214457295030269
-            },
-            "kullback-leibler divergence": {
-                "openaire": "peres-horodecki criterion",
-                "openalex": "kullback-leibler divergence",
-                "similarity": 0.8874897598691992
             },
             "bipartite graph": {
                 "openaire": "multipartite entanglement",
@@ -14486,16 +14086,6 @@
                 "openalex": "noise exposure",
                 "similarity": 0.8699844179803778
             },
-            "population": {
-                "openaire": "national health and nutrition examination survey",
-                "openalex": "population",
-                "similarity": 0.678126415194868
-            },
-            "artificial intelligence": {
-                "openaire": "national health and nutrition examination survey",
-                "openalex": "artificial intelligence",
-                "similarity": 0.6807251278226918
-            },
             "computer science": {
                 "openaire": "medical and health sciences",
                 "openalex": "computer science",
@@ -14503,11 +14093,6 @@
             }
         },
         "best_matches_openaire": {
-            "cross-sectional study": {
-                "openaire": "cross-sectional study",
-                "openalex": "cross-sectional study",
-                "similarity": 1.0
-            },
             "hearing loss": {
                 "openaire": "hearing loss",
                 "openalex": "hearing loss",
@@ -14528,11 +14113,6 @@
                 "openalex": "medicine",
                 "similarity": 1.0
             },
-            "medical and health sciences": {
-                "openaire": "medical and health sciences",
-                "openalex": "national health and nutrition examination survey",
-                "similarity": 0.8969151997712872
-            },
             "clinical medicine": {
                 "openaire": "clinical medicine",
                 "openalex": "medicine",
@@ -14552,11 +14132,6 @@
                 "openaire": "health surveys",
                 "openalex": "environmental health",
                 "similarity": 0.8767625816462269
-            },
-            "cross-sectional studies": {
-                "openaire": "cross-sectional studies",
-                "openalex": "cross-sectional study",
-                "similarity": 0.9807592407072054
             },
             "neurology (clinical)": {
                 "openaire": "neurology (clinical)",
@@ -14638,11 +14213,6 @@
                 "openalex": "audiology",
                 "similarity": 0.5387633057819291
             },
-            "united states": {
-                "openaire": "united states",
-                "openalex": "national health and nutrition examination survey",
-                "similarity": 0.5858198713243777
-            },
             "sensory systems": {
                 "openaire": "sensory systems",
                 "openalex": "artificial intelligence",
@@ -14667,11 +14237,6 @@
                 "openaire": "female",
                 "openalex": "population",
                 "similarity": 0.33507530094096966
-            },
-            "business": {
-                "openaire": "business",
-                "openalex": "national health and nutrition examination survey",
-                "similarity": 0.5801960892577667
             },
             "neurology neurosurgery": {
                 "openaire": "neurology neurosurgery",
@@ -15864,11 +15429,6 @@
                 "openalex": "mathematical optimization",
                 "similarity": 0.8245954611074999
             },
-            "regulator": {
-                "openaire": "linear regulator",
-                "openalex": "regulator",
-                "similarity": 0.7515985060983161
-            },
             "mathematical analysis": {
                 "openaire": "mathematics",
                 "openalex": "mathematical analysis",
@@ -15908,11 +15468,6 @@
                 "openaire": "computer science applications",
                 "openalex": "programming language",
                 "similarity": 0.7091509401007775
-            },
-            "gene": {
-                "openaire": "linear regulator",
-                "openalex": "gene",
-                "similarity": 0.4705599583709536
             }
         },
         "best_matches_openaire": {
@@ -16124,11 +15679,6 @@
                 "openalex": "narcissism",
                 "similarity": 1.0
             },
-            "admiration": {
-                "openaire": "admiration",
-                "openalex": "admiration",
-                "similarity": 1.0
-            },
             "conceptualization": {
                 "openaire": "conceptualization",
                 "openalex": "conceptualization",
@@ -16198,11 +15748,6 @@
                 "openaire": "medicine",
                 "openalex": "psychology",
                 "similarity": 0.6233518601108884
-            },
-            "praise": {
-                "openaire": "praise",
-                "openalex": "admiration",
-                "similarity": 0.4514267192808568
             },
             "enforcement": {
                 "openaire": "enforcement",
@@ -17202,11 +16747,6 @@
                 "openalex": "human-computer interaction",
                 "similarity": 0.6340558770667997
             },
-            "multimedia": {
-                "openaire": "video gaming",
-                "openalex": "multimedia",
-                "similarity": 0.677765914865075
-            },
             "neuroscience": {
                 "openaire": "clinical medicine",
                 "openalex": "neuroscience",
@@ -17613,16 +17153,6 @@
                 "openalex": "renewable energy",
                 "similarity": 0.9278972037425428
             },
-            "load regulation": {
-                "openaire": "load shifting",
-                "openalex": "load regulation",
-                "similarity": 0.8623613122355215
-            },
-            "load management": {
-                "openaire": "load shifting",
-                "openalex": "load management",
-                "similarity": 0.8640959325812501
-            },
             "load profile": {
                 "openaire": "load forecasting",
                 "openalex": "load profile",
@@ -17708,11 +17238,6 @@
             "demand response": {
                 "openaire": "demand response",
                 "openalex": "demand response",
-                "similarity": 1.0
-            },
-            "peaking power plant": {
-                "openaire": "peaking power plant",
-                "openalex": "peaking power plant",
                 "similarity": 1.0
             },
             "hvac": {
@@ -17946,11 +17471,6 @@
             "hierarchical routing": {
                 "openaire": "hierarchical routing",
                 "openalex": "hierarchical routing",
-                "similarity": 1.0
-            },
-            "zone routing protocol": {
-                "openaire": "zone routing protocol",
-                "openalex": "zone routing protocol",
                 "similarity": 1.0
             },
             "link-state routing protocol": {
@@ -18526,11 +18046,6 @@
                 "openaire": "quantum physics (quant-ph)",
                 "openalex": "resource (disambiguation)",
                 "similarity": 0.7674231697537617
-            },
-            "information systems": {
-                "openaire": "information systems",
-                "openalex": "convertibility",
-                "similarity": 0.7673834180437098
             }
         }
     },
@@ -18658,11 +18173,6 @@
                 "openalex": "transaction cost",
                 "similarity": 0.676300789295014
             },
-            "resource-based view": {
-                "openaire": "resource integration",
-                "openalex": "resource-based view",
-                "similarity": 0.7305554665836413
-            },
             "computer science": {
                 "openaire": "social sciences",
                 "openalex": "computer science",
@@ -18677,11 +18187,6 @@
                 "openaire": "corporate governance",
                 "openalex": "law",
                 "similarity": 0.44162681084931776
-            },
-            "operating system": {
-                "openaire": "resource integration",
-                "openalex": "operating system",
-                "similarity": 0.762979212021311
             },
             "computer network": {
                 "openaire": "database transaction",
@@ -21409,11 +20914,6 @@
                 "openalex": "drainage basin",
                 "similarity": 0.6787772626722693
             },
-            "metals heavy": {
-                "openaire": "metals heavy",
-                "openalex": "trace metal",
-                "similarity": 0.6463514680060166
-            },
             "waste management and disposal": {
                 "openaire": "waste management and disposal",
                 "openalex": "environmental chemistry",
@@ -22916,11 +22416,6 @@
                 "openalex": "robustness (evolution)",
                 "similarity": 0.9661762394158876
             },
-            "population": {
-                "openaire": "population variance",
-                "openalex": "population",
-                "similarity": 0.9150095278183805
-            },
             "biochemistry": {
                 "openaire": "mathematics",
                 "openalex": "biochemistry",
@@ -22945,11 +22440,6 @@
                 "openaire": "mathematics",
                 "openalex": "geography",
                 "similarity": 0.6859269971532093
-            },
-            "demography": {
-                "openaire": "population variance",
-                "openalex": "demography",
-                "similarity": 0.7009577953789204
             },
             "sociology": {
                 "openaire": "mathematics",
@@ -23183,11 +22673,6 @@
             "physics": {
                 "openaire": "physics",
                 "openalex": "physics",
-                "similarity": 1.0
-            },
-            "spontaneous symmetry breaking": {
-                "openaire": "spontaneous symmetry breaking",
-                "openalex": "spontaneous symmetry breaking",
                 "similarity": 1.0
             },
             "theoretical physics": {
@@ -24433,11 +23918,6 @@
                 "openalex": "data set",
                 "similarity": 1.0
             },
-            "lung cancer screening": {
-                "openaire": "lung cancer screening",
-                "openalex": "lung cancer screening",
-                "similarity": 1.0
-            },
             "malignancy": {
                 "openaire": "lung neoplasms",
                 "openalex": "malignancy",
@@ -24477,11 +23957,6 @@
                 "openaire": "radiographic image interpretation computer-assisted",
                 "openalex": "computed tomography",
                 "similarity": 0.7883413722242735
-            },
-            "hounsfield scale": {
-                "openaire": "ground-glass opacity",
-                "openalex": "hounsfield scale",
-                "similarity": 0.5248372736709005
             },
             "artificial intelligence": {
                 "openaire": "computer vision and pattern recognition",
@@ -24846,11 +24321,6 @@
                 "openalex": "job attitude",
                 "similarity": 1.0
             },
-            "core self-evaluations": {
-                "openaire": "core self-evaluations",
-                "openalex": "core self-evaluations",
-                "similarity": 1.0
-            },
             "job performance": {
                 "openaire": "job performance",
                 "openalex": "job performance",
@@ -25035,11 +24505,6 @@
                 "openaire": "nonlinear system",
                 "openalex": "embedded system",
                 "similarity": 0.8796031776756377
-            },
-            "principle of maximum entropy": {
-                "openaire": "principle of least action",
-                "openalex": "principle of maximum entropy",
-                "similarity": 0.9175498076934661
             },
             "action (physics)": {
                 "openaire": "causality (physics)",
@@ -25527,11 +24992,6 @@
                 "openaire": "developmental biology",
                 "openalex": "neuroscience",
                 "similarity": 0.7780924030062893
-            },
-            "fishery": {
-                "openaire": "cichlids",
-                "openalex": "fishery",
-                "similarity": 0.6398380835026729
             },
             "computer science": {
                 "openaire": "evolutionary developmental biology",
@@ -28089,11 +27549,6 @@
                 "openalex": "mathematics",
                 "similarity": 1.0
             },
-            "wave propagation": {
-                "openaire": "wave propagation",
-                "openalex": "kinematic wave",
-                "similarity": 0.8422136457481666
-            },
             "applied mathematics": {
                 "openaire": "applied mathematics",
                 "openalex": "mathematics",
@@ -28118,11 +27573,6 @@
                 "openaire": "natural sciences",
                 "openalex": "computer science",
                 "similarity": 0.7468764745719817
-            },
-            "love wave": {
-                "openaire": "love wave",
-                "openalex": "kinematic wave",
-                "similarity": 0.7554537392319164
             },
             "dynamical systems complex systems theory": {
                 "openaire": "dynamical systems complex systems theory",
@@ -28279,11 +27729,6 @@
                 "openaire": "electrical and electronic engineering",
                 "openalex": "operating system",
                 "similarity": 0.7447530169127763
-            },
-            "image (mathematics)": {
-                "openaire": "h mpeg- part",
-                "openalex": "image (mathematics)",
-                "similarity": 0.4543170953132469
             }
         },
         "best_matches_openaire": {
