@@ -10,6 +10,7 @@ def process_json_file(folder_path, filename):
                 for result in data['results']:
                     doi = result.get('doi')
                     if doi:
+                        doi = doi.replace('https://doi.org/', '')
                         response = requests.get(f'https://api.openaire.eu/search/publications?doi={doi}')
                         if response.status_code == 200:
                             xml_data = response.text
