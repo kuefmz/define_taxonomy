@@ -1,4 +1,4 @@
-# Define a small taxonomy (~200 terms) for AI/ML domain
+W# Define a small taxonomy (~200 terms) for AI/ML domain
 
 
 ## Overview
@@ -90,3 +90,4 @@ These papers should be manually validated by domain experts.
 
 
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10987999.svg)](https://doi.org/10.5281/zenodo.10987999) 
