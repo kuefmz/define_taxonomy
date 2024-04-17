@@ -89,5 +89,4 @@ python3 scr/validation.py
 These papers should be manually validated by domain experts.
 
 
-
-[[DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10987999.svg)](https://doi.org/10.5281/zenodo.10987999) 
+![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10987999.svg)](https://doi.org/10.5281/zenodo.10987999
