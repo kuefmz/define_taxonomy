@@ -1,4 +1,7 @@
-W# Define a small taxonomy (~200 terms) for AI/ML domain
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10987999.svg)](https://doi.org/10.5281/zenodo.10987999) 
+ 
+
+Define a small taxonomy (~200 terms) for AI/ML domain to use for software classification later on.
 
 
 ## Overview
@@ -88,4 +91,3 @@ python3 scr/validation.py
 
 These papers should be manually validated by domain experts.
 
- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10987999.svg)](https://doi.org/10.5281/zenodo.10987999) 
