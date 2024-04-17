@@ -2,7 +2,6 @@ import json
 import os
 import pandas as pd
 import json
-from utils.utils import preprocess_term
 
 
 
@@ -50,8 +49,11 @@ def main():
                     for pair in selected_pairs:
                         if pair[0] in categories_openalex and pair[1] in categories_openaire:
                             selected_papirs_to_validate[pair].append(title)
-    
+    for maps in selected_papirs_to_validate.keys():
+        if len(selected_papirs_to_validate[maps]) < 10:
+            print(maps)
     converted_dict = {str(key): value for key, value in selected_papirs_to_validate.items()}
+    
     with open('papers_to_validate_05.json', 'w') as json_file:
         json.dump(converted_dict, json_file, indent=4)		
 
