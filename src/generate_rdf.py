@@ -54,22 +54,21 @@ def process_json_files(folder_path, rdf_file_path):
                     graph = add_work_to_graph(graph, work)
                 else:
                     logging.warning(f"Skipping work with missing title: {work.get('id')}")
+            
+            # Save the RDF graph after processing each JSON file
+            with FileLock(rdf_file_path + '.lock'):
+                logging.info(f"Serializing RDF graph to file: {rdf_file_path}")
+                graph.serialize(destination=rdf_file_path, format='turtle')
+                logging.info("Serialization complete")
+        
         except Exception as e:
             logging.error(f"Failed to process file {json_file_path}: {e}")
-    
+
     return graph
 
 # Main script execution
-folder_path = 'data/initial_collection/'
+folder_path = '/path/to/your/json/folder'
 rdf_file_path = 'data.rdf'
-lock_file_path = rdf_file_path + '.lock'
 
-# Ensure safe concurrent access to the RDF file using file locking
-logging.info("Attempting to acquire file lock")
-with FileLock(lock_file_path):
-    logging.info("File lock acquired")
-    graph = process_json_files(folder_path, rdf_file_path)
-    # Serialize the graph to the RDF file
-    logging.info(f"Serializing RDF graph to file: {rdf_file_path}")
-    graph.serialize(destination=rdf_file_path, format='turtle')
-    logging.info("Serialization complete")
+# Process the JSON files and update the RDF graph
+process_json_files(folder_path, rdf_file_path)
