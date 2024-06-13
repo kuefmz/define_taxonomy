@@ -72,7 +72,7 @@ with FileLock(lock_file_path):
         new_graph = process_json_file(json_file_path, main_graph)
         # Serialize only new triples to the RDF file
         with open(rdf_file_path, 'a') as rdf_file:
-            rdf_file.write(new_graph.serialize(format='turtle').decode('utf-8'))
+            rdf_file.write(new_graph.serialize(format='turtle'))
         main_graph += new_graph
 
     logging.info("All files processed")
