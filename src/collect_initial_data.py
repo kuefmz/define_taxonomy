@@ -44,8 +44,8 @@ def get_openaire_subjects_from_title(title):
 def main():
 	concept_id = 'C154945302' # AI
 	sort_by = 'cited_by_count:desc'
-	per_page = 10
-	cursor = '*'
+	per_page = 200
+	cursor = 'IlswLCA2OS4wLCAwLCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzQyNDg5NDM0NjInXSI='
     
 	base_url = 'https://api.openalex.org/works'
 	params = {
@@ -54,10 +54,10 @@ def main():
         'per_page': per_page,
         'cursor': cursor,
 	}
-	page_count = 1
+	page_count = 49999 + 1
     
 	while True:
-		time.sleep(10)
+		time.sleep(1)
 		out_json = {}
 		print(f'Fetching page: {page_count}')
 		
@@ -67,11 +67,11 @@ def main():
 		if response.status_code == 200:
 			data = response.json()
 			page_results = data['results']
-			if False:
+			if True:
 				with open(f'data/raw_openalex_api_outputs/page_{page_count}.json', 'a+') as f:
 					json.dump(data, f, indent=4)
 			
-			cnt = 0
+			page_results = []
 			for work in page_results:
 				cnt += 1
 				print(f'Work count: {cnt}')
@@ -110,8 +110,8 @@ def main():
 				out_json[title]['openaire'] = openaire_terms
 
 		
-			with open(f'data/initial_collection/output_{page_count}.json', 'a+') as f:  
-				f.write(json.dumps(out_json, indent=4))
+			#with open(f'data/initial_collection/output_{page_count}.json', 'a+') as f:  
+			#	f.write(json.dumps(out_json, indent=4))
 
 			cursor = data.get('meta', {}).get('next_cursor')	
 			if not cursor or cursor == '':
