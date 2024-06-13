@@ -16,7 +16,7 @@ def process_json_file(folder_path, filename):
                             xml_data = response.text
                             # Save the XML data to a file
                             xml_filename = f"{result['id'].split('/')[-1]}.xml"
-                            with open('data/raw_openaire_data/' + xml_filename, 'w') as xml_file:
+                            with open('data/raw_openaire_data/' + filename + '_' + xml_filename, 'w') as xml_file:
                                 xml_file.write(xml_data)
                         else:
                             print(f"Failed to fetch data for DOI {doi}")
@@ -26,4 +26,7 @@ if __name__ == "__main__":
     filenames = os.listdir(folder_path)
     filenames.sort()
     for filename in filenames:
-    	process_json_file(folder_path, filename)
+        if filename < 'page_161':
+            continue
+        print(f'processing: {filename}')
+        process_json_file(folder_path, filename)
