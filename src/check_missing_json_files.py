@@ -37,6 +37,6 @@ def find_missing_indices(folder_path, output_file):
     print(f"Missing indices written to {output_file}")
 
 # Example usage:
-folder_path = 'path/to/your/folder'
+folder_path = '/home/jenifer/define_taxonomy/data/raw_openalex_api_outputs/'
 output_file = 'missing_indices.txt'
 find_missing_indices(folder_path, output_file)

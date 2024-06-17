@@ -60,8 +60,8 @@ def process_json_files(folder_path, rdf_file_path):
     return graph
 
 # Main script execution
-folder_path = '/path/to/your/json/folder'
-rdf_file_path = 'data.rdf'
+folder_path = '/home/jenifer/define_taxonomy/data/raw_openalex_api_outputs/'
+rdf_file_path = 'data1.rdf'
 lock_file_path = rdf_file_path + '.lock'
 
 # Ensure safe concurrent access to the RDF file using file locking

@@ -93,9 +93,10 @@ paper_batch_count = 0
 category_batch_count = 0
 
 for json_file_path in glob.glob(os.path.join(folder_path, '*.json')):
-    new_graph = process_json_file(json_file_path, papers_graph)
+    process_json_file(json_file_path, papers_graph)
     
-    paper_count += len(new_graph)
+    paper_count += len(papers_graph)
+    logging.info(f'Papers graphs len: {len(papers_graph)}')
     if paper_count >= 1000:
         paper_batch_count += 1
         save_graph_to_file(papers_graph, papers_output_folder, papers_prefix, paper_batch_count)
@@ -116,6 +117,7 @@ for json_file_path in glob.glob(os.path.join(folder_path, '*.json')):
     categories_graph = process_json_file_cat(json_file_path, categories_graph)
 
     category_count += len(categories_graph)
+    logger.info(f'Categories graph len: {len(categories_graph)}')
     if category_count >= 1000:
         category_batch_count += 1
         save_graph_to_file(categories_graph, categories_output_folder, categories_prefix, category_batch_count)

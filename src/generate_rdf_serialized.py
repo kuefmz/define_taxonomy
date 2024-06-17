@@ -23,7 +23,7 @@ def add_work_to_graph(graph, work):
             concept_uri = URIRef(concept['id'])
             graph.add((work_uri, SCHEMA.about, concept_uri))
             graph.add((concept_uri, SCHEMA.name, Literal(concept['display_name'])))
-        logging.info(f"Added new work to the graph: {work['title']}")
+        #logging.info(f"Added new work to the graph: {work['title']}")
     else:
         logging.info(f"Work already exists in the graph: {work['title']}")
 
@@ -53,14 +53,14 @@ def process_json_file(json_file_path, graph):
     return new_graph
 
 # Main script execution
-folder_path = '/path/to/your/json/folder'
-rdf_file_path = 'data.rdf'
+folder_path = '/home/jenifer/raw_openalex/'
+rdf_file_path = '/home/jenifer/data2.rdf'
 lock_file_path = rdf_file_path + '.lock'
 
 # Ensure safe concurrent access to the RDF file using file locking
-logging.info("Attempting to acquire file lock")
+#logging.info("Attempting to acquire file lock")
 with FileLock(lock_file_path):
-    logging.info("File lock acquired")
+    #logging.info("File lock acquired")
     
     # Load existing RDF file if it exists
     main_graph = Graph()
