@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 SCHEMA = Namespace("http://schema.org/")
 
 # Function to add a work to the graph
-def add_work_to_graph(graph, work, categories_graph):
+def add_work_to_graph(graph, work):
     work_uri = URIRef(work['id'])
     if (work_uri, None, None) not in graph:
         graph.add((work_uri, RDF.type, SCHEMA.ScholarlyArticle))
@@ -44,13 +44,28 @@ def process_json_file(json_file_path, graph):
         # Iterate through each work in the JSON and add to the RDF graph
         for work in data['results']:
             if 'title' in work:  # Ensure there is a title
-                add_work_to_graph(graph, work, categories_graph)
+                add_work_to_graph(graph, work)
             else:
                 logging.warning(f"Skipping work with missing title: {work.get('id')}")
     except Exception as e:
         logging.error(f"Failed to process file {json_file_path}: {e}")
 
-    return new_graph, categories_graph
+
+# Function to process a single JSON file
+def process_json_file_cat(json_file_path, graph):
+    logging.info(f"Processing JSON file: {json_file_path}")
+    try:
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+        
+        # Iterate through each work in the JSON and add to the RDF graph
+        for work in data['results']:
+            if 'title' in work:  # Ensure there is a title
+                add_category_to_graph(graph, work)
+            else:
+                logging.warning(f"Skipping work with missing title: {work.get('id')}")
+    except Exception as e:
+        logging.error(f"Failed to process file {json_file_path}: {e}")
 
 # Function to save RDF graph to file
 def save_graph_to_file(graph, base_path, prefix, count):
@@ -98,7 +113,7 @@ categories_graph = Graph()
 categories_graph.namespace_manager.bind('schema', SCHEMA, override=True, replace=True)
 
 for json_file_path in glob.glob(os.path.join(folder_path, '*.json')):
-    categories_graph = process_json_file(json_file_path, categories_graph)
+    categories_graph = process_json_file_cat(json_file_path, categories_graph)
 
     category_count += len(categories_graph)
     if category_count >= 1000:
