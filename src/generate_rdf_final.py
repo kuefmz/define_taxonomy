@@ -19,6 +19,10 @@ def add_work_to_graph(graph, work):
         graph.add((work_uri, SCHEMA.name, Literal(work['title'])))
         graph.add((work_uri, SCHEMA.identifier, Literal(work['doi'])))
         
+        work_uri = URIRef(work['id'])
+        for concept in work.get('concepts', []):
+            concept_uri = URIRef(concept['id'])
+            graph.add((work_uri, SCHEMA.about, concept_uri))
 
         logging.info(f"Added new work to the graph: {work['title']}")
     else:
@@ -26,10 +30,8 @@ def add_work_to_graph(graph, work):
 
 
 def add_category_to_graph(graph, work):
-    work_uri = URIRef(work['id'])
     for concept in work.get('concepts', []):
         concept_uri = URIRef(concept['id'])
-        graph.add((work_uri, SCHEMA.about, concept_uri))
         if (concept_uri, None, None) not in categories_graph:
             categories_graph.add((concept_uri, RDF.type, SCHEMA.Thing))
             categories_graph.add((concept_uri, SCHEMA.name, Literal(concept['display_name'])))
