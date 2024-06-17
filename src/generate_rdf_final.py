@@ -19,25 +19,23 @@ def add_work_to_graph(graph, work, categories_graph):
         graph.add((work_uri, SCHEMA.name, Literal(work['title'])))
         graph.add((work_uri, SCHEMA.identifier, Literal(work['doi'])))
         
-        for concept in work.get('concepts', []):
-            concept_uri = URIRef(concept['id'])
-            graph.add((work_uri, SCHEMA.about, concept_uri))
-            if (concept_uri, None, None) not in categories_graph:
-                categories_graph.add((concept_uri, RDF.type, SCHEMA.Thing))
-                categories_graph.add((concept_uri, SCHEMA.name, Literal(concept['display_name'])))
+
         logging.info(f"Added new work to the graph: {work['title']}")
     else:
         logging.info(f"Work already exists in the graph: {work['title']}")
 
-    return graph, categories_graph
+
+def add_category_to_graph(graph, work):
+    work_uri = URIRef(work['id'])
+    for concept in work.get('concepts', []):
+        concept_uri = URIRef(concept['id'])
+        graph.add((work_uri, SCHEMA.about, concept_uri))
+        if (concept_uri, None, None) not in categories_graph:
+            categories_graph.add((concept_uri, RDF.type, SCHEMA.Thing))
+            categories_graph.add((concept_uri, SCHEMA.name, Literal(concept['display_name'])))
 
 # Function to process a single JSON file
-def process_json_file(json_file_path, graph, categories_graph):
-    new_graph = Graph()
-
-    # Bind the schema.org namespace to the prefix 'schema'
-    new_graph.namespace_manager.bind('schema', SCHEMA, override=True, replace=True)
-
+def process_json_file(json_file_path, graph):
     logging.info(f"Processing JSON file: {json_file_path}")
     try:
         with open(json_file_path, 'r') as file:
@@ -46,7 +44,7 @@ def process_json_file(json_file_path, graph, categories_graph):
         # Iterate through each work in the JSON and add to the RDF graph
         for work in data['results']:
             if 'title' in work:  # Ensure there is a title
-                new_graph, categories_graph = add_work_to_graph(new_graph, work, categories_graph)
+                add_work_to_graph(graph, work, categories_graph)
             else:
                 logging.warning(f"Skipping work with missing title: {work.get('id')}")
     except Exception as e:
@@ -70,7 +68,8 @@ categories_prefix = 'categories'
 
 
 papers_graph = Graph()
-categories_graph = Graph()
+papers_graph.namespace_manager.bind('schema', SCHEMA, override=True, replace=True)
+
 
 
 paper_count = 0
@@ -79,26 +78,35 @@ paper_batch_count = 0
 category_batch_count = 0
 
 for json_file_path in glob.glob(os.path.join(folder_path, '*.json')):
-    new_graph, categories_graph = process_json_file(json_file_path, papers_graph, categories_graph)
+    new_graph = process_json_file(json_file_path, papers_graph)
     
     paper_count += len(new_graph)
     if paper_count >= 1000:
         paper_batch_count += 1
         save_graph_to_file(papers_graph, papers_output_folder, papers_prefix, paper_batch_count)
-        papers_graph = Graph()  # Reset the graph
+        papers_graph = Graph()
+        papers_graph.namespace_manager.bind('schema', SCHEMA, override=True, replace=True)
         paper_count = 0
-    
+
+
+if paper_count > 0:
+    paper_batch_count += 1
+    save_graph_to_file(papers_graph, papers_output_folder, papers_prefix, paper_batch_count)
+
+
+categories_graph = Graph()
+categories_graph.namespace_manager.bind('schema', SCHEMA, override=True, replace=True)
+
+for json_file_path in glob.glob(os.path.join(folder_path, '*.json')):
+    categories_graph = process_json_file(json_file_path, categories_graph)
+
     category_count += len(categories_graph)
     if category_count >= 1000:
         category_batch_count += 1
         save_graph_to_file(categories_graph, categories_output_folder, categories_prefix, category_batch_count)
-        categories_graph = Graph()  # Reset the graph
+        categories_graph = Graph()
+        categories_graph.namespace_manager.bind('schema', SCHEMA, override=True, replace=True)
         category_count = 0
-
-# Save remaining graphs if any
-if paper_count > 0:
-    paper_batch_count += 1
-    save_graph_to_file(papers_graph, papers_output_folder, papers_prefix, paper_batch_count)
 
 if category_count > 0:
     category_batch_count += 1
